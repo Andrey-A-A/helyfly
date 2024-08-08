@@ -1,0 +1,130 @@
+.top {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  &__logo {
+    img {
+      margin-right: 36px;
+    }
+  }
+  &__tel {
+    display: block;
+    p {
+      font-size: 14px;
+      line-height: 17.07px;
+      span {
+        color: $light-grey;
+      }
+    }
+  }
+  &__city {
+    display: none;
+  }
+  &__entry {
+    display: none;
+  }
+}
+header {
+  background: url('../img/helimain.png') no-repeat center top;
+  width: 100%;
+  height: 840px;
+  color: $white;
+  h1 {
+    padding: 286px 290px 29px 0px;
+    font-size: 40px;
+    line-height: 48.76px;
+    span {
+      color: $orange;
+    }
+  }
+  .cost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $orange;
+    width: 224px;
+    height: 96px;
+    background: url('../img/Rectangle.png')no-repeat left;
+    &__text {
+      font-size: 20px;
+      line-height: 30.23px;
+      margin-left: 20px;
+    }
+    &__text .bold {
+      margin-top: -16px;
+      font-size: 35px;
+      line-height: 52.9px;
+    }
+  }
+  .booking {
+    margin-top: 12px;
+    color: $white;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    width: 304px;
+    height: 68px;
+    background-color: transparent;
+    border: 3px solid $white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    filter: drop-shadow(0 4px 70px rgba(255, 255, 255, .7));
+    cursor: pointer;
+    transition: all .3s ease 0s;
+  }
+  .booking:hover {
+    border: 3px solid $orange;
+    color: $orange;
+  }
+}
+
+@media (max-width: 1141.98px) {
+  .wrapper {
+    @include min-max(320px, 1142px, 0px, 15px);
+  }
+}
+
+@media (max-width: 767px) {
+  .top {
+    height: 60px;
+    justify-content: space-between;
+    &__logo {
+      img {
+        width: 84px;
+      }
+    }
+    &__tel {
+      display: none;
+    }
+    &__city {
+      display: block;
+      margin-right: 50px;
+      a {
+        font-size: 14px;
+        line-height: 17;
+        color: $blue;
+      }
+    }
+    &__entry {
+      display: block;
+      margin-right: 20px;
+    }
+  }
+  header {
+    background: url('../img/helimain-m.png') no-repeat center top;
+    background-size: cover;
+    background-position:50%;
+    height: 655px;
+    h1 {
+      font-size: 32px;
+      line-height: 39.01px;
+      padding: 75px 70px 29px 0px;
+    }
+    .booking {
+      width: 275px;
+      font-size: 16px;
+      line-height: 19.5px;
+      border-radius: 7px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+/**
+ * Основные стили
+ **/
+@import "variables";
+html, body {
+	width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: $grey;
+  font-size: 18px;
+}
+
+.container {
+	@include min-max(320px, 1916px, 0px, 0px);
+}
+
+.wrapper {
+	@include min-max(320px, 1142px, 0px, 0px);
+}
+
+.bold{
+	font-weight: 600;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 22px;
+	//font-size: calc(14px + (16-14) * ((100vw - 320px) / (1440 - 320)));
+	line-height: 33.25px;
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+p {
+	font-size: 16px;
+	line-height: 24.18px;
+}
+
+a {
+	text-decoration: none;
+	//font-family: "Montserrat", sans-serif;
+	&:hover {
+		text-decoration: underline;
+	}
+}

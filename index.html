@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>HELYFLY</title>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <div class="wrapper">
+        <div class="top">
+          <a href="" class="top__logo">
+            <img src="./img/vector.png" alt="logo">
+          </a>
+          <div class="top__tel">
+            <p><span>Телефон:</span>8(800)-123-12-12</p>
+          </div>
+          <div class="top__city">
+            <a href="">Москва</a>
+          </div>
+          <div class="top__entry">
+            <img src="./img/figura.svg" alt="вход">
+          </div>
+        </div>
+      </div>
+      <header>
+        <div class="wrapper">
+          <h1 class="bold">Эксклюзивная <span>фотосессия</span> при полете на вертолете</h1>
+          <div class="cost">
+            <div class="cost__text">
+              <div>Стоимость</div>
+              <div class="bold">1500₽</div>
+            </div>
+            <div class="cost__icon"><img src="./img/percent.svg" alt="проценты"></div>
+          </div>
+          <button class="booking">Забронировать место</button>
+        </div>
+      </header>
+      <div class="overlay" id="overlay"></div>
+      <section class="modal" id="modal">
+        <div class="modal__content">
+          <button class="modal__close">
+            <img src="./img/сlose.svg" alt="close">
+          </button>
+          <h2>Бронирование</h2>
+          <label>
+            <input type="date" size="40" placeholder="ДД.ММ.ГГГГ">
+            <p>Дата<span class="">*</span></p>  
+          </label>
+          <label>
+            <input type="text" size="40" placeholder="Электронная почта">
+            <p>Email<span class="">*</span></p>  
+          </label>
+          <label>
+            <input type="text" size="40" placeholder="Имя">
+            <p>Имя<span class="">*</span></p>  
+          </label>
+          <label>
+            <input type="text" size="40" placeholder="Фамилия">
+            <p>Фамилия<span class="">*</span></p>  
+          </label>
+          <label>
+            <input type="text" size="40" placeholder="+7 (905) 184-81-40">
+            <p>Телефон<span class="">*</span></p>  
+          </label>
+          <label>
+            <div class="kart">
+              <input type="text" size="40" placeholder="срок действия">
+              <input type="text" maxlength="3" onkeydown="return numbersOnly(event);" size="40" placeholder="CVV">
+            </div>
+            <input type="text" size="40" placeholder="Номер карты">
+            <p>Данные карты<span class="">*</span></p>  
+          </label>
+          <label class="modal__agree">
+            <input type="checkbox" name="key" value="value" />
+            <span>Я согласен с пользовательским <br>
+              соглашением и публичной офертой</span>
+          </label>
+          <button class="modal__submit" onclick="button_form()">Забронировать</button>
+        </div>
+      </section>
+      <section class="benefit">
+        <div class="wrapper">
+          <div class="benefit__wrap">
+            <div class="benefit__left">
+              <h2>Фотосессия <br>в вертолете</h2>
+              <p class="benefit__decription">Полет на вертолете это прекрасная возможность <br> получить новые ощущения! А наш замечательный <br> фотограф запечатлит лучшие моменты</p>
+              <div class="benefit__list">
+                <div class="item">
+                  <img src="./img/watch.png" alt="часы">
+                  <p>3 часа съемки</p>
+                </div>
+                <div class="item">
+                  <img src="./img/camera.svg" alt="камера">
+                  <p>Более 50 фотографий</p>
+                </div>
+                <div class="item">
+                  <img src="./img/geo.svg" alt="гео">
+                  <p>Москва</p>
+                </div>
+                <div class="item">
+                  <img src="./img/issue.svg" alt="вопросы">
+                  <p>Готовы ответить на любые вопросы</p>
+                </div>
+              </div>
+              <hr>
+              <div class="benefit__rating">
+                <img id="rating__icon" src="./img/groupcup.svg" alt="">
+                <div class="benefit__rating-item">
+                  <p>Более <span>50</span> отзывов с оценкой</p>
+                  <div class="benefit__rating-stars">
+                    <img src="./img/star.svg" alt="звезда">
+                    <img src="./img/star.svg" alt="звезда">
+                    <img src="./img/star.svg" alt="звезда">
+                    <img src="./img/star.svg" alt="звезда">
+                    <img src="./img/star.svg" alt="звезда">
+                  </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <div class="benefit__right">
+              <h2>Фотосессия <br>в вертолете</h2>
+              <video controls poster="/img/two.png">
+                <source src="/img/fly.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+                Элемент video не поддерживается вашим браузером.
+                <a href="/img/two.png">Скачайте видео</a>.
+              </video>
+              <!--
+              <video controls poster="/img/two.png">
+                <source src="/img/fly.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+                Элемент video не поддерживается вашим браузером.
+                <a href="/img/two.png">Скачайте видео</a>.
+              </video>
+              -->
+              
+            </div>               
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+@mixin min-max($min-width, $max-width, $padding-y, $padding-x) {
+  min-width: $min-width;
+  max-width: $max-width;
+  padding: $padding-y $padding-x;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@mixin min-max-margin($min-width, $max-width, $padding-y, $padding-x, $margin) {
+  min-width: $min-width;
+  max-width: $max-width;
+  padding: $padding-y $padding-x;
+  box-sizing: border-box;
+  margin: $margin auto;
+}
+
+@mixin menu($bg:"../img/house.svg", $w:17px, $h:18px, $mr:0 10.39px 0 0) {
+  &::before {
+    content: "";
+    display: block;
+    background: url($bg) no-repeat;
+    width: $w;
+    height: $h;
+    float: left;
+    //margin-left: 7px;
+    margin: $mr;
+    @content;
+  }
+}
+
+@mixin main-item1($fx:0 1 48.6%, $mt:100%){
+  position: relative;
+  flex: $fx;
+  background: #383E57;
+  box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 18px;
+  transition: 0.3s ease;
+  margin-bottom: 31px;
+  &::before {
+    content: "";
+    display: block;
+    margin-top: $mt;
+  }
+}
+
+@mixin main-item2($fx:0 1 31.4%, $ar:340 / 230){
+  flex: $fx;
+  background: #383E57;
+  box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 18px;
+  transition: 0.3s ease;
+  margin-bottom: 31px;
+  aspect-ratio: $ar;
+}
+
+@mixin main-item($fx:0 1 31.4%, $pt:calc(340 / 230 * 100%)) {
+  flex: $fx;
+  background: #383E57;
+  box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 18px;
+  transition: 0.3s ease;
+  margin-bottom: 31px;
+  position: relative;
+  display: block;
+  &:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+    transform: translateY(-10px) scale(1.02);
+  }
+  &::after {
+    content: '';
+    display: block;
+    padding-top: $pt;
+  }
+  @content;
+}
+
+@mixin btn2($bg: $black, $fs: 9px, $lh: 13px, $ls: 0.54px, $fw: 700, $br: 40px, $pd:13px 0, $clr: $white) {
+  width:auto;
+  color: $clr;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-weight: $fw;
+  background-color: $bg;
+  border-radius: $br;
+  padding: $pd;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 25px 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  display: inline-block;
+  @content; //в этом месте мы сможем подключать дополнительные стили
+
+  //&:hover {
+    //background-color: lighten($bg, 15%);
+    //
+  //}
+}
+
+@mixin btn3($bg: $black, $fs: 9px, $lh: 13px, $ls: 0.54px, $fw: 700, $br: 40px, $pd:24px 0, $clr: $white, $mr: 15px 15px) {
+    min-width: 200px;
+		height: 70px;
+		padding: $pd;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		display: inline-block;
+		text-decoration: none;
+		background-color: $bg;
+		color: $clr;
+    text-transform: uppercase;
+    border-radius: $br;
+    margin: $mr;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+    font-weight: $fw;
+    box-sizing: border-box;
+  @content; //в этом месте мы сможем подключать дополнительные стили
+
+  //&:hover {
+    //background-color: lighten($bg, 15%);
+    //
+  //}
+}
+
+@mixin btn($bg: $black, $fs: 9px, $lh: 13px, $ls: 0.54px, $fw: 700, $br: 40px, $w: 114px, $pd:13px 0, $clr: $white, $mr: 25px 0px) {
+  width: $w;
+  //height: $h;
+  color: $clr;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-weight: $fw;
+  background-color: $bg;
+  border-radius: $br;
+  padding: $pd;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  margin: $mr;
+  text-decoration: none;
+  @content; //в этом месте мы сможем подключать дополнительные стили
+}
+
+
+
+
