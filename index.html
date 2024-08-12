@@ -123,11 +123,17 @@
             </div>
             <div class="benefit__right">
               <h2>Фотосессия <br>в вертолете</h2>
-              <video controls poster="/img/two.png">
-                <source src="/img/fly.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
-                Элемент video не поддерживается вашим браузером.
-                <a href="/img/two.png">Скачайте видео</a>.
-              </video>              
+              <div id="video-container">
+                <!-- Заставка с кнопкой -->
+                <div id="video-poster" style="position: relative;">
+                  <img src="/img/two.png" alt="Заставка" style="display: block;">
+                  <button id="play-button" style="position: absolute; top: 90%; left: 90%; transform: translate(-50%, -50%);  cursor: pointer;"></button>
+                </div>
+                <!-- Видеоплеер Rutube -->
+                <div id="video-player" style="display: none;">
+                  <iframe width="640" height="360" src="https://rutube.ru/play/embed/3f456dde6633c9f5f09f07416ff570da/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </div>
+              </div>
             </div>               
           </div>
         </div>

@@ -34,3 +34,8 @@ window.onclick = function (e) {
     modal.classList.remove('show');
   }
 }
+
+document.getElementById('play-button').addEventListener('click', function() {
+  document.getElementById('video-poster').style.display = 'none';
+  document.getElementById('video-player').style.display = 'block';
+});
